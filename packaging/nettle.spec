@@ -82,13 +82,11 @@ make check
 %files -n libnettle
 %defattr(-,root,root)
 %doc COPYING*
-%{_libdir}/libnettle.so.
-%{_libdir}/libnettle.so..*
+%{_libdir}/libnettle.so.*
 
 %files -n libhogweed
 %defattr(-,root,root)
-%{_libdir}/libhogweed.so.
-%{_libdir}/libhogweed.so..*
+%{_libdir}/libhogweed.so.*
 
 %files -n libnettle-devel
 %defattr(-,root,root)
