@@ -3,7 +3,7 @@ Version:        2.4
 Release:        0
 Summary:        Cryptographic Library
 License:        LGPL-2.1+ and GPL-2.0+
-Group:          System/Libraries
+Group:          Security/Crypto Libraries
 Source0:        ftp://ftp.lysator.liu.se/pub/security/lsh/nettle-%{version}.tar.gz
 Source1:        baselibs.conf
 BuildRequires:  gmp-devel
@@ -18,7 +18,7 @@ Python, Pike, ...), in applications like LSH or GNUPG, or even in kernel space.
 
 Summary:        Cryptographic Library for Public Key Algorithms
 License:        LGPL-2.1+
-Group:          System/Libraries
+Group:          Security/Crypto Libraries
 
 %description -n libhogweed
 Nettle is a cryptographic library that is designed to fit easily in more or
@@ -30,7 +30,7 @@ The libhogweed library contains public key algorithms to use with libnettle.
 %package -n libnettle-devel
 Summary:        Cryptographic Library
 License:        LGPL-2.1+
-Group:          Development/Libraries/C and C++
+Group:          Development/Libraries
 Requires:       glibc-devel
 Requires:       gmp-devel
 Requires:       libhogweed = %{version}
@@ -45,7 +45,7 @@ Python, Pike, ...), in applications like LSH or GNUPG, or even in kernel space.
 
 Summary:        Cryptographic Tools
 License:        LGPL-2.1+ and GPL-2.0+
-Group:          Productivity/Security
+Group:          Security/Crypto Libraries
 
 %description -n libnettle
 Nettle is a cryptographic library that is designed to fit easily in more or
@@ -81,7 +81,7 @@ make check
 
 %files -n libnettle
 %defattr(-,root,root)
-%doc COPYING*
+%license COPYING*
 %{_libdir}/libnettle.so.*
 
 %files -n libhogweed
@@ -99,15 +99,9 @@ make check
 
 %files -n nettle
 %defattr(-,root,root)
-%doc COPYING*
 %{_bindir}/nettle-lfib-stream
 %{_bindir}/pkcs1-conv
 %{_bindir}/sexp-conv
 %{_bindir}/nettle-hash
-
-# Local Variables:
-# mode: rpm-spec
-# tab-width: 3
-# End:
 
 %changelog
