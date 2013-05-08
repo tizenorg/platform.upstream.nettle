@@ -56,7 +56,7 @@ This package contains a few command-line tools to perform cryptographic
 operations using the nettle library.
 
 %prep
-%setup -q -n "nettle-%{version}"
+%setup -q 
 
 %build
 %configure --disable-static \
