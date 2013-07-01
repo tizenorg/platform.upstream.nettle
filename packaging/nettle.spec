@@ -6,6 +6,7 @@ License:        LGPL-2.1+ and GPL-2.0+
 Group:          Security/Crypto Libraries
 Source0:        ftp://ftp.lysator.liu.se/pub/security/lsh/nettle-%{version}.tar.gz
 Source1:        baselibs.conf
+Source1001: 	nettle.manifest
 BuildRequires:  gmp-devel
 BuildRequires:  pkgconfig
 
@@ -57,6 +58,7 @@ operations using the nettle library.
 
 %prep
 %setup -q 
+cp %{SOURCE1001} .
 
 %build
 %configure --disable-static \
@@ -80,15 +82,18 @@ make check
 
 
 %files -n libnettle
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %license COPYING*
 %{_libdir}/libnettle.so.*
 
 %files -n libhogweed
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %{_libdir}/libhogweed.so.*
 
 %files -n libnettle-devel
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %{_includedir}/nettle
 %{_libdir}/libnettle.so
@@ -98,6 +103,7 @@ make check
 %{_libdir}/pkgconfig/nettle.pc
 
 %files -n nettle
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %{_bindir}/nettle-lfib-stream
 %{_bindir}/pkcs1-conv
