@@ -1,12 +1,12 @@
 Name:           nettle
-Version:        2.4
+Version:        2.7.1
 Release:        0
 Summary:        Cryptographic Library
 License:        LGPL-2.1+ and GPL-2.0+
 Group:          Security/Crypto Libraries
 Source0:        ftp://ftp.lysator.liu.se/pub/security/lsh/nettle-%{version}.tar.gz
 Source1:        baselibs.conf
-Source1001: 	nettle.manifest
+Source1001:     nettle.manifest
 BuildRequires:  gmp-devel
 BuildRequires:  pkgconfig
 
@@ -62,12 +62,12 @@ cp %{SOURCE1001} .
 
 %build
 %configure --disable-static \
-	 --enable-shared
+    --enable-shared
 
-make %{?_smp_mflags}
+%__make %{?_smp_mflags}
 
 %check
-make check
+%__make check
 
 %install
 %make_install
@@ -109,5 +109,3 @@ make check
 %{_bindir}/pkcs1-conv
 %{_bindir}/sexp-conv
 %{_bindir}/nettle-hash
-
-%changelog
