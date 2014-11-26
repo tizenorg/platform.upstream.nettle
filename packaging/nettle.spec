@@ -1,5 +1,5 @@
 Name:           nettle
-Version:        2.4
+Version:        2.7.1
 Release:        0
 Summary:        Cryptographic Library
 License:        LGPL-2.1+ and GPL-2.0+
@@ -61,8 +61,8 @@ operations using the nettle library.
 cp %{SOURCE1001} .
 
 %build
-%configure --disable-static \
-	 --enable-shared
+#%configure --disable-static \
+%configure --enable-shared
 
 make %{?_smp_mflags}
 
@@ -98,7 +98,6 @@ make check
 %{_includedir}/nettle
 %{_libdir}/libnettle.so
 %{_libdir}/libhogweed.so
-%{_infodir}/nettle.info%{ext_info}
 %{_libdir}/pkgconfig/hogweed.pc
 %{_libdir}/pkgconfig/nettle.pc
 
