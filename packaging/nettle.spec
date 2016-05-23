@@ -61,6 +61,7 @@ operations using the nettle library.
 cp %{SOURCE1001} .
 
 %build
+%restore_fcommon
 #configure --disable-static
 %configure --enable-shared
 
