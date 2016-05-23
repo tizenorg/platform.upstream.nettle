@@ -57,11 +57,11 @@ This package contains a few command-line tools to perform cryptographic
 operations using the nettle library.
 
 %prep
-%setup -q 
+%setup -q
 cp %{SOURCE1001} .
 
 %build
-#%configure --disable-static \
+#configure --disable-static
 %configure --enable-shared
 
 make %{?_smp_mflags}
