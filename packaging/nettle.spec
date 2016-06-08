@@ -1,5 +1,5 @@
 Name:           nettle
-Version:        2.7.1
+Version:        3.2
 Release:        0
 Summary:        Cryptographic Library
 License:        LGPL-2.1+ and GPL-2.0+
@@ -108,5 +108,5 @@ make check
 %{_bindir}/pkcs1-conv
 %{_bindir}/sexp-conv
 %{_bindir}/nettle-hash
-
+%{_bindir}/nettle-pbkdf2
 %changelog
