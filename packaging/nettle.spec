@@ -4,7 +4,7 @@ Release:        0
 Summary:        Cryptographic Library
 License:        LGPL-2.1+ and GPL-2.0+
 Group:          Security/Crypto Libraries
-Source0:        ftp://ftp.lysator.liu.se/pub/security/lsh/nettle-%{version}.tar.gz
+Source0:        https://ftp.gnu.org/gnu/nettle/nettle-%{version}.tar.gz
 Source1:        baselibs.conf
 Source1001: 	nettle.manifest
 BuildRequires:  gmp-devel
